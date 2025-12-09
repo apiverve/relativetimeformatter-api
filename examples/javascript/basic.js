@@ -1,0 +1,61 @@
+/**
+ * Relative Time Formatter API - Basic Usage Example
+ *
+ * This example demonstrates the basic usage of the Relative Time Formatter API.
+ * API Documentation: https://docs.apiverve.com/ref/relativetimeformatter
+ */
+
+const API_KEY = process.env.APIVERVE_API_KEY || 'YOUR_API_KEY_HERE';
+const API_URL = 'https://api.apiverve.com/v1/relativetimeformatter';
+
+/**
+ * Make a GET request to the Relative Time Formatter API
+ */
+async function callRelativeTimeFormatterAPI() {
+  try {
+    // Query parameters
+    const params &#x3D; new URLSearchParams({
+            timestamp: &#x27;1609459200&#x27;,
+            date: &#x27;2024-01-01T00:00:00Z&#x27;,
+            reference: &#x27;2024-06-01T00:00:00Z&#x27;,
+            style: &#x27;short&#x27;
+        });
+
+    const response = await fetch(`${API_URL}?${params}`, {
+      method: 'GET',
+      headers: {
+        'x-api-key': API_KEY
+      }
+    });
+
+    // Check if response is successful
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    // Check API response status
+    if (data.status === 'ok') {
+      console.log('✓ Success!');
+      console.log('Response data:', data.data);
+      return data.data;
+    } else {
+      console.error('✗ API Error:', data.error || 'Unknown error');
+      return null;
+    }
+
+  } catch (error) {
+    console.error('✗ Request failed:', error.message);
+    return null;
+  }
+}
+
+// Run the example
+callRelativeTimeFormatterAPI()
+  .then(result => {
+    if (result) {
+      console.log('\n📊 Final Result:');
+      console.log(JSON.stringify(result, null, 2));
+    }
+  });
