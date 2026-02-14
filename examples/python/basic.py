@@ -17,14 +17,11 @@ def call_relativetimeformatter_api():
     Make a GET request to the Relative Time Formatter API
     """
     try:
-        # Query parameters
-        params &#x3D; {&#x27;timestamp&#x27;: &#x27;1609459200&#x27;, &#x27;date&#x27;: &#x27;2024-01-01T00:00:00Z&#x27;, &#x27;reference&#x27;: &#x27;2024-06-01T00:00:00Z&#x27;, &#x27;style&#x27;: &#x27;short&#x27;}
-
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers, params=params)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
