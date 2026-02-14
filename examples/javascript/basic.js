@@ -13,15 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/relativetimeformatter';
  */
 async function callRelativeTimeFormatterAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            timestamp: &#x27;1609459200&#x27;,
-            date: &#x27;2024-01-01T00:00:00Z&#x27;,
-            reference: &#x27;2024-06-01T00:00:00Z&#x27;,
-            style: &#x27;short&#x27;
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
