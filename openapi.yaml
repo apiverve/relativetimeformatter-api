@@ -1,55 +1,50 @@
 openapi: 3.0.4
 info:
   title: Relative Time Formatter
-  description: Relative Time Formatter is a tool for converting timestamps and dates to human-readable relative time formats like '2 hours ago' or 'in 3 days'. It supports multiple styles and custom reference times for flexible time representation.
+  description: >-
+    Relative Time Formatter is a tool for converting timestamps and dates to
+    human-readable relative time formats like '2 hours ago' or 'in 3 days'. It
+    supports multiple styles and custom reference times for flexible time
+    representation.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/relativetimeformatter:
     get:
-      summary: Format Relative Time
-      description: Relative Time Formatter is a tool for converting timestamps and dates to human-readable relative time formats like '2 hours ago' or 'in 3 days'. It supports multiple styles and custom reference times for flexible time representation.
+      summary: Format from Timestamp
+      description: Convert Unix timestamp to relative time format
       operationId: relativetimeformatter
       parameters:
-      - name: timestamp
-        in: query
-        schema:
-          type: string
-        required: false
-        description: Unix timestamp in seconds or milliseconds (provide either timestamp or date)
-        example: '1609459200'
-      - name: date
-        in: query
-        schema:
-          type: string
-        required: false
-        description: ISO date string (provide either timestamp or date)
-        example: 2024-01-01T00:00:00.0000000Z
-      - name: reference
-        default: now
-        in: query
-        schema:
-          type: string
-        required: false
-        description: 'Reference time to compare against (default: current time)'
-        example: 2024-06-01T00:00:00.0000000Z
-      - name: style
-        default: short
-        in: query
-        schema:
-          type: string
-        required: false
-        description: 'Output style: short, long, or abbreviated (default: short)'
-        example: short
+        - name: timestamp
+          in: query
+          schema:
+            type: string
+          required: true
+          description: Unix timestamp in seconds or milliseconds
+          example: '1609459200'
+        - name: reference
+          in: query
+          schema:
+            type: string
+          required: false
+          description: 'Reference time to compare against (default: current time)'
+          example: '2024-06-01T00:00:00Z'
+        - name: style
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Output style
+          example: short
       responses:
         '200':
           description: Successful Response
@@ -65,36 +60,36 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
-                  target_date: 2021-01-01T00:00:00.0000000Z
-                  reference_date: 2025-11-15T05:18:30.8310000Z
+                  target_date: '2021-01-01T00:00:00Z'
+                  reference_date: '2025-12-16T22:28:24.459Z'
                   relative_time: 4 years ago
                   is_past: true
                   is_future: false
-                  difference_ms: -153724710831
+                  difference_ms: -156464904459
                   primary_unit: year
                   primary_value: 4
                   all_units:
                     years: 4
-                    months: 58
-                    weeks: 254
-                    days: 1779
-                    hours: 42701
-                    minutes: 2562078
-                    seconds: 153724710
-                    milliseconds: 153724710831
+                    months: 59
+                    weeks: 258
+                    days: 1810
+                    hours: 43462
+                    minutes: 2607748
+                    seconds: 156464904
+                    milliseconds: 156464904459
                   style: short
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -102,4 +97,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
