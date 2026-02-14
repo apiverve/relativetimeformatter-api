@@ -5,8 +5,9 @@ Relative Time Formatter is a tool for converting timestamps and dates to human-r
 ![Build Status](https://img.shields.io/badge/build-passing-green)
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
+[![npm version](https://img.shields.io/npm/v/@apiverve/relativetimeformatter.svg)](https://www.npmjs.com/package/@apiverve/relativetimeformatter)
 
-This is a Javascript Wrapper for the [Relative Time Formatter API](https://apiverve.com/marketplace/relativetimeformatter)
+This is a Javascript Wrapper for the [Relative Time Formatter API](https://apiverve.com/marketplace/relativetimeformatter?utm_source=npm&utm_medium=readme)
 
 ---
 
@@ -27,15 +28,15 @@ yarn add @apiverve/relativetimeformatter
 ## Configuration
 
 Before using the Relative Time Formatter API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com)
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=readme)
 
 ---
 
 ## Quick Start
 
-[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart)
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=readme)
 
-The Relative Time Formatter API documentation is found here: [https://docs.apiverve.com/ref/relativetimeformatter](https://docs.apiverve.com/ref/relativetimeformatter).
+The Relative Time Formatter API documentation is found here: [https://docs.apiverve.com/ref/relativetimeformatter](https://docs.apiverve.com/ref/relativetimeformatter?utm_source=npm&utm_medium=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -60,8 +61,7 @@ Using the API is simple. All you have to do is make a request. The API will retu
 ```javascript
 var query = {
   timestamp: "1609459200",
-  date: "2024-01-01T00:00:00Z",
-  reference: "2024-06-01T00:00:00Z",
+  reference: "now",
   style: "short"
 };
 
@@ -83,8 +83,7 @@ You can also use promises to make requests. The API returns a promise that you c
 ```javascript
 var query = {
   timestamp: "1609459200",
-  date: "2024-01-01T00:00:00Z",
-  reference: "2024-06-01T00:00:00Z",
+  reference: "now",
   style: "short"
 };
 
@@ -107,8 +106,7 @@ You can also use async/await to make requests. The API returns a promise that yo
 async function makeRequest() {
     var query = {
   timestamp: "1609459200",
-  date: "2024-01-01T00:00:00Z",
-  reference: "2024-06-01T00:00:00Z",
+  reference: "now",
   style: "short"
 };
 
@@ -157,7 +155,7 @@ async function makeRequest() {
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=readme).
 
 ---
 
@@ -169,14 +167,14 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=readme), [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=readme), and [Refund Policy](https://apiverve.com/refund?utm_source=npm&utm_medium=readme).
 
 ---
 
 ## License
 Licensed under the The MIT License (MIT)
 
-Copyright (&copy;) 2025 APIVerve, and EvlarSoft LLC
+Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
