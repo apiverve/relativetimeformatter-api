@@ -44,7 +44,11 @@ from apiverve_relativetimeformatter.apiClient import RelativetimeformatterAPICli
 # Initialize the client with your APIVerve API key
 api = RelativetimeformatterAPIClient("[YOUR_API_KEY]")
 
-query = { "timestamp": "1609459200", "reference": "now", "style": "short" }
+query = {
+    "timestamp": "1609459200",
+    "reference": "now",
+    "style": "short"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "timestamp": "1609459200", "reference": "now", "style": "short" }
+query = {
+    "timestamp": "1609459200",
+    "reference": "now",
+    "style": "short"
+}
 ```
 
 ###### Simple Request
@@ -138,7 +146,11 @@ from apiverve_relativetimeformatter.apiClient import RelativetimeformatterAPICli
 
 api = RelativetimeformatterAPIClient("[YOUR_API_KEY]")
 
-query = { "timestamp": "1609459200", "reference": "now", "style": "short" }
+query = {
+    "timestamp": "1609459200",
+    "reference": "now",
+    "style": "short"
+}
 
 try:
     result = api.execute(query)
@@ -159,7 +171,11 @@ from apiverve_relativetimeformatter.apiClient import RelativetimeformatterAPICli
 
 api = RelativetimeformatterAPIClient("[YOUR_API_KEY]")
 
-query = { "timestamp": "1609459200", "reference": "now", "style": "short" }
+query = {
+    "timestamp": "1609459200",
+    "reference": "now",
+    "style": "short"
+}
 
 try:
     result = api.execute(query)
@@ -193,7 +209,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_relativetimeformatter.apiClient import RelativetimeformatterAPIClient, RelativetimeformatterAPIClientError
 
-query = { "timestamp": "1609459200", "reference": "now", "style": "short" }
+query = {
+    "timestamp": "1609459200",
+    "reference": "now",
+    "style": "short"
+}
 
 # Using context manager ensures proper cleanup
 with RelativetimeformatterAPIClient("[YOUR_API_KEY]") as api:
@@ -219,7 +239,11 @@ from apiverve_relativetimeformatter.apiClient import RelativetimeformatterAPICli
 # Enable debug mode
 api = RelativetimeformatterAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "timestamp": "1609459200", "reference": "now", "style": "short" }
+query = {
+    "timestamp": "1609459200",
+    "reference": "now",
+    "style": "short"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -234,8 +258,13 @@ from apiverve_relativetimeformatter.apiClient import RelativetimeformatterAPICli
 
 api = RelativetimeformatterAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "timestamp": "1609459200",
+    "reference": "now",
+    "style": "short"
+}
+
 try:
-    query = { "timestamp": "1609459200", "reference": "now", "style": "short" }
     result = api.execute(query)
     print(result)
 finally:
