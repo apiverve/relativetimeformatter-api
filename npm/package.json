@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/relativetimeformatter",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Relative Time Formatter is a tool for converting timestamps and dates to human-readable relative time formats like '2 hours ago' or 'in 3 days'. It supports multiple styles and custom reference times for flexible time representation.",
   "main": "index.js",
   "types": "index.d.ts",
