@@ -30,7 +30,13 @@ The Relative Time Formatter API provides a simple, reliable way to integrate rel
 ```javascript
 async function callRelativeTimeFormatterAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/relativetimeformatter', {
+        const params = new URLSearchParams({
+            timestamp: '1609459200',
+            reference: '2024-06-01T00:00:00Z',
+            style: 'short'
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/relativetimeformatter?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +56,7 @@ callRelativeTimeFormatterAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/relativetimeformatter?param=value" \
+curl -X GET "https://api.apiverve.com/v1/relativetimeformatter?timestamp=1609459200&reference=2024-06-01T00%3A00%3A00Z&style=short" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,7 +156,7 @@ go get github.com/apiverve/relativetimeformatter-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
@@ -169,7 +175,7 @@ go get github.com/apiverve/relativetimeformatter-api/go
 The Relative Time Formatter API is commonly used for:
 
 - **Web Applications** - Add relative time formatter features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with relative time formatter capabilities
 - **Data Pipelines** - Process and analyze data at scale
