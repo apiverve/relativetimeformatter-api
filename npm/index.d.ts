@@ -4,36 +4,48 @@ declare module '@apiverve/relativetimeformatter' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface relativetimeformatterResponse {
     status: string;
     error: string | null;
     data: RelativeTimeFormatterData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface RelativeTimeFormatterData {
-      targetDate:    Date;
-      referenceDate: Date;
-      relativeTime:  string;
-      isPast:        boolean;
-      isFuture:      boolean;
-      differenceMS:  number;
-      primaryUnit:   string;
-      primaryValue:  number;
+      targetDate:    Date | null;
+      referenceDate: Date | null;
+      relativeTime:  null | string;
+      isPast:        boolean | null;
+      isFuture:      boolean | null;
+      differenceMS:  number | null;
+      primaryUnit:   null | string;
+      primaryValue:  number | null;
       allUnits:      AllUnits;
-      style:         string;
+      style:         null | string;
   }
   
   interface AllUnits {
-      years:        number;
-      months:       number;
-      weeks:        number;
-      days:         number;
-      hours:        number;
-      minutes:      number;
-      seconds:      number;
-      milliseconds: number;
+      years:        number | null;
+      months:       number | null;
+      weeks:        number | null;
+      days:         number | null;
+      hours:        number | null;
+      minutes:      number | null;
+      seconds:      number | null;
+      milliseconds: number | null;
   }
 
   export default class relativetimeformatterWrapper {
