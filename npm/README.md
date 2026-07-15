@@ -61,7 +61,7 @@ Using the API is simple. All you have to do is make a request. The API will retu
 ```javascript
 var query = {
   timestamp: "1609459200",
-  reference: "now",
+  reference: "2024-06-01T00:00:00Z",
   style: "short"
 };
 
@@ -83,7 +83,7 @@ You can also use promises to make requests. The API returns a promise that you c
 ```javascript
 var query = {
   timestamp: "1609459200",
-  reference: "now",
+  reference: "2024-06-01T00:00:00Z",
   style: "short"
 };
 
@@ -106,7 +106,7 @@ You can also use async/await to make requests. The API returns a promise that yo
 async function makeRequest() {
     var query = {
   timestamp: "1609459200",
-  reference: "now",
+  reference: "2024-06-01T00:00:00Z",
   style: "short"
 };
 
@@ -129,22 +129,22 @@ async function makeRequest() {
   "error": null,
   "data": {
     "target_date": "2021-01-01T00:00:00Z",
-    "reference_date": "2025-11-15T05:18:30.831Z",
+    "reference_date": "2025-12-16T22:28:24.459Z",
     "relative_time": "4 years ago",
     "is_past": true,
     "is_future": false,
-    "difference_ms": -153724710831,
+    "difference_ms": -156464904459,
     "primary_unit": "year",
     "primary_value": 4,
     "all_units": {
       "years": 4,
-      "months": 58,
-      "weeks": 254,
-      "days": 1779,
-      "hours": 42701,
-      "minutes": 2562078,
-      "seconds": 153724710,
-      "milliseconds": 153724710831
+      "months": 59,
+      "weeks": 258,
+      "days": 1810,
+      "hours": 43462,
+      "minutes": 2607748,
+      "seconds": 156464904,
+      "milliseconds": 156464904459
     },
     "style": "short"
   }
