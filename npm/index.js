@@ -30,7 +30,7 @@ class relativetimeformatterWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/relativetimeformatter';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"timestamp":{"type":"string","required":true},"reference":{"type":"string","required":false,"format":"date","default":"now"},"style":{"type":"string","required":false,"default":"short"}};
+        this.validationRules = {"timestamp":{"type":"string","required":true,"format":"timestamp"},"reference":{"type":"string","required":false,"format":"date"},"style":{"type":"string","required":false,"default":"short"}};
     }
 
     /**
