@@ -16,7 +16,7 @@ const api = new relativetimeformatterAPI({
 // Example query
 var query = {
   timestamp: "1609459200",
-  reference: "now",
+  reference: "2024-06-01T00:00:00Z",
   style: "short"
 };
 
