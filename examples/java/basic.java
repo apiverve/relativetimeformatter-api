@@ -12,8 +12,14 @@ public class BasicExample {
         RelativeTimeFormatterAPIClient client = new RelativeTimeFormatterAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Execute the API request (no parameters required)
-            APIResponse response = client.execute(null);
+            // Query parameters
+            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
+        parameters.put(&quot;timestamp&quot;, &quot;1609459200&quot;);
+        parameters.put(&quot;reference&quot;, &quot;2024-06-01T00:00:00Z&quot;);
+        parameters.put(&quot;style&quot;, &quot;short&quot;);
+
+            // Execute the API request
+            APIResponse response = client.execute(parameters);
 
             // Check if the request was successful
             if (response.isSuccess()) {
