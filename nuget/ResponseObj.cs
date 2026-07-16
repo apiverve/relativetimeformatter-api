@@ -25,33 +25,36 @@ namespace APIVerve.API.RelativeTimeFormatter
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("target_date")]
-        public DateTimeOffset TargetDate { get; set; }
+        public DateTimeOffset? TargetDate { get; set; }
 
         [JsonProperty("reference_date")]
-        public DateTimeOffset ReferenceDate { get; set; }
+        public DateTimeOffset? ReferenceDate { get; set; }
 
         [JsonProperty("relative_time")]
         public string RelativeTime { get; set; }
 
         [JsonProperty("is_past")]
-        public bool IsPast { get; set; }
+        public bool? IsPast { get; set; }
 
         [JsonProperty("is_future")]
-        public bool IsFuture { get; set; }
+        public bool? IsFuture { get; set; }
 
         [JsonProperty("difference_ms")]
-        public long DifferenceMs { get; set; }
+        public long? DifferenceMs { get; set; }
 
         [JsonProperty("primary_unit")]
         public string PrimaryUnit { get; set; }
 
         [JsonProperty("primary_value")]
-        public long PrimaryValue { get; set; }
+        public long? PrimaryValue { get; set; }
 
         [JsonProperty("all_units")]
         public AllUnits AllUnits { get; set; }
@@ -63,27 +66,39 @@ namespace APIVerve.API.RelativeTimeFormatter
     public partial class AllUnits
     {
         [JsonProperty("years")]
-        public long Years { get; set; }
+        public long? Years { get; set; }
 
         [JsonProperty("months")]
-        public long Months { get; set; }
+        public long? Months { get; set; }
 
         [JsonProperty("weeks")]
-        public long Weeks { get; set; }
+        public long? Weeks { get; set; }
 
         [JsonProperty("days")]
-        public long Days { get; set; }
+        public long? Days { get; set; }
 
         [JsonProperty("hours")]
-        public long Hours { get; set; }
+        public long? Hours { get; set; }
 
         [JsonProperty("minutes")]
-        public long Minutes { get; set; }
+        public long? Minutes { get; set; }
 
         [JsonProperty("seconds")]
-        public long Seconds { get; set; }
+        public long? Seconds { get; set; }
 
         [JsonProperty("milliseconds")]
-        public long Milliseconds { get; set; }
+        public long? Milliseconds { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
