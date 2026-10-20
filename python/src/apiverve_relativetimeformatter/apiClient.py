@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -24,8 +24,8 @@ class ValidationError(RelativetimeformatterAPIClientError):
 class RelativetimeformatterAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
-        "timestamp": {"type": "string", "required": True},
-        "reference": {"type": "string", "required": False, "format": "date", "default": "now"},
+        "timestamp": {"type": "string", "required": True, "format": "timestamp"},
+        "reference": {"type": "string", "required": False, "format": "date"},
         "style": {"type": "string", "required": False, "default": "short"}
     }
 

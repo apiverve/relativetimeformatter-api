@@ -1,13 +1,12 @@
 Relative Time Formatter API
 ============
 
-Relative Time Formatter is a tool for converting timestamps and dates to human-readable relative time formats like '2 hours ago' or 'in 3 days'. It supports multiple styles and custom reference times for flexible time representation.
+Relative Time Formatter converts Unix timestamps and ISO dates into readable relative time phrases. Choose between short, long, or abbreviated styles to get humanized past or future strings, millisecond differences, and unit breakdowns from seconds to years.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Relative Time Formatter API](https://apiverve.com/marketplace/relativetimeformatter?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-relativetimeformatter.svg)](https://pypi.org/project/apiverve-relativetimeformatter/)
+
+This is a Python wrapper for the [Relative Time Formatter API](https://apiverve.com/marketplace/relativetimeformatter?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-relativetimeformatter
 
 ## Configuration
 
-Before using the relativetimeformatter API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Relative Time Formatter API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -46,7 +45,7 @@ api = RelativetimeformatterAPIClient("[YOUR_API_KEY]")
 
 query = {
     "timestamp": "1609459200",
-    "reference": "now",
+    "reference": "2024-06-01T00:00:00Z",
     "style": "short"
 }
 
@@ -64,7 +63,7 @@ except Exception as e:
 
 ## Usage
 
-The Relative Time Formatter API documentation is found here: [https://docs.apiverve.com/ref/relativetimeformatter](https://docs.apiverve.com/ref/relativetimeformatter?utm_source=pypi&utm_medium=readme).
+The Relative Time Formatter API documentation is found here: [https://docs.apiverve.com/ref/relativetimeformatter](https://docs.apiverve.com/ref/relativetimeformatter?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -88,7 +87,7 @@ Using the API client, you can perform requests to the API.
 ```python
 query = {
     "timestamp": "1609459200",
-    "reference": "now",
+    "reference": "2024-06-01T00:00:00Z",
     "style": "short"
 }
 ```
@@ -111,22 +110,22 @@ print(result)
   "error": null,
   "data": {
     "target_date": "2021-01-01T00:00:00Z",
-    "reference_date": "2025-11-15T05:18:30.831Z",
+    "reference_date": "2025-12-16T22:28:24.459Z",
     "relative_time": "4 years ago",
     "is_past": true,
     "is_future": false,
-    "difference_ms": -153724710831,
+    "difference_ms": -156464904459,
     "primary_unit": "year",
     "primary_value": 4,
     "all_units": {
       "years": 4,
-      "months": 58,
-      "weeks": 254,
-      "days": 1779,
-      "hours": 42701,
-      "minutes": 2562078,
-      "seconds": 153724710,
-      "milliseconds": 153724710831
+      "months": 59,
+      "weeks": 258,
+      "days": 1810,
+      "hours": 43462,
+      "minutes": 2607748,
+      "seconds": 156464904,
+      "milliseconds": 156464904459
     },
     "style": "short"
   }
@@ -148,7 +147,7 @@ api = RelativetimeformatterAPIClient("[YOUR_API_KEY]")
 
 query = {
     "timestamp": "1609459200",
-    "reference": "now",
+    "reference": "2024-06-01T00:00:00Z",
     "style": "short"
 }
 
@@ -173,7 +172,7 @@ api = RelativetimeformatterAPIClient("[YOUR_API_KEY]")
 
 query = {
     "timestamp": "1609459200",
-    "reference": "now",
+    "reference": "2024-06-01T00:00:00Z",
     "style": "short"
 }
 
@@ -211,7 +210,7 @@ from apiverve_relativetimeformatter.apiClient import RelativetimeformatterAPICli
 
 query = {
     "timestamp": "1609459200",
-    "reference": "now",
+    "reference": "2024-06-01T00:00:00Z",
     "style": "short"
 }
 
@@ -241,7 +240,7 @@ api = RelativetimeformatterAPIClient("[YOUR_API_KEY]", debug=True)
 
 query = {
     "timestamp": "1609459200",
-    "reference": "now",
+    "reference": "2024-06-01T00:00:00Z",
     "style": "short"
 }
 
@@ -260,7 +259,7 @@ api = RelativetimeformatterAPIClient("[YOUR_API_KEY]")
 
 query = {
     "timestamp": "1609459200",
-    "reference": "now",
+    "reference": "2024-06-01T00:00:00Z",
     "style": "short"
 }
 
@@ -276,7 +275,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -287,12 +286,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
