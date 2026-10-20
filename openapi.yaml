@@ -2,10 +2,10 @@ openapi: 3.0.4
 info:
   title: Relative Time Formatter
   description: >-
-    Relative Time Formatter is a tool for converting timestamps and dates to
-    human-readable relative time formats like '2 hours ago' or 'in 3 days'. It
-    supports multiple styles and custom reference times for flexible time
-    representation.
+    Relative Time Formatter converts Unix timestamps and ISO dates into readable
+    relative time phrases. Choose between short, long, or abbreviated styles to
+    get humanized past or future strings, millisecond differences, and unit
+    breakdowns from seconds to years.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -20,7 +20,7 @@ servers:
 paths:
   /v1/relativetimeformatter:
     get:
-      summary: Format from Timestamp
+      summary: Relative Time Formatter
       description: Convert Unix timestamp to relative time format
       operationId: relativetimeformatter
       parameters:

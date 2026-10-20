@@ -1,13 +1,13 @@
-# [Relative Time Formatter API](https://apiverve.com/marketplace/relativetimeformatter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Relative Time Formatter API](https://apiverve.com/marketplace/relativetimeformatter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Relative Time Formatter is a tool for converting timestamps and dates to human-readable relative time formats like &#x27;2 hours ago&#x27; or &#x27;in 3 days&#x27;. It supports multiple styles and custom reference times for flexible time representation.
+Relative Time Formatter converts Unix timestamps and ISO dates into readable relative time phrases. Choose between short, long, or abbreviated styles to get humanized past or future strings, millisecond differences, and unit breakdowns from seconds to years.
 
 The Relative Time Formatter API provides a simple, reliable way to integrate relative time formatter functionality into your applications. Built for developers who need production-ready relative time formatter capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/relativetimeformatter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/relativetimeformatter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/relativetimeformatter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/relativetimeformatter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -163,7 +163,7 @@ go get github.com/apiverve/relativetimeformatter-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Relative Time Formatter API](https://apiverve.com/marketplace/relativetimeformatter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Relative Time Formatter API](https://apiverve.com/marketplace/relativetimeformatter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/relativetimeformatter](https://docs.apiverve.com/ref/relativetimeformatter)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -193,11 +193,46 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Relative Time Formatter API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "target_date": "2021-01-01T00:00:00Z",
+    "reference_date": "2025-12-16T22:28:24.459Z",
+    "relative_time": "4 years ago",
+    "is_past": true,
+    "is_future": false,
+    "difference_ms": -156464904459,
+    "primary_unit": "year",
+    "primary_value": 4,
+    "all_units": {
+      "years": 4,
+      "months": 59,
+      "weeks": 258,
+      "days": 1810,
+      "hours": 43462,
+      "minutes": 2607748,
+      "seconds": 156464904,
+      "milliseconds": 156464904459
+    },
+    "style": "short"
+  }
 }
 ```
 
@@ -205,7 +240,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Relative Time Formatter API](https://apiverve.com/marketplace/relativetimeformatter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Relative Time Formatter API](https://apiverve.com/marketplace/relativetimeformatter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
