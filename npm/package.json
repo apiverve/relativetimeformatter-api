@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/relativetimeformatter",
-  "version": "1.2.0",
-  "description": "Relative Time Formatter is a tool for converting timestamps and dates to human-readable relative time formats like '2 hours ago' or 'in 3 days'. It supports multiple styles and custom reference times for flexible time representation.",
+  "version": "1.2.2",
+  "description": "Relative Time Formatter converts Unix timestamps and ISO dates into readable relative time phrases. Choose between short, long, or abbreviated styles to get humanized past or future strings, millisecond differences, and unit breakdowns from seconds to years.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/relativetimeformatter-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/relativetimeformatter?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/relativetimeformatter?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
