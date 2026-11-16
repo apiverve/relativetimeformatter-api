@@ -35,7 +35,7 @@ class Client
      */
     private const VALIDATION_RULES = [
         'timestamp' => ['type' => 'string', 'required' => true, 'format' => 'timestamp'],
-        'reference' => ['type' => 'string', 'required' => false, 'format' => 'date'],
+        'reference' => ['type' => 'string', 'required' => false, 'format' => 'datetime'],
         'style' => ['type' => 'string', 'required' => false]
     ];
 
