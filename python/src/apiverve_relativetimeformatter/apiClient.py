@@ -25,7 +25,7 @@ class RelativetimeformatterAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
         "timestamp": {"type": "string", "required": True, "format": "timestamp"},
-        "reference": {"type": "string", "required": False, "format": "date"},
+        "reference": {"type": "string", "required": False, "format": "datetime"},
         "style": {"type": "string", "required": False, "default": "short"}
     }
 
