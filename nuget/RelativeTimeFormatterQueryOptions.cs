@@ -17,7 +17,7 @@ namespace APIVerve.API.RelativeTimeFormatter
         public string Timestamp { get; set; }
 
         /// <summary>
-        /// Reference time to compare against (default: current time)
+        /// Date or ISO 8601 date-time to compare against (default: current time). A time and offset are used; a date alone is midnight UTC
         /// </summary>
         [JsonProperty("reference")]
         public string Reference { get; set; }

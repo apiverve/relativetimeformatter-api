@@ -68,7 +68,7 @@ namespace APIVerve.API.RelativeTimeFormatter
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
             { "timestamp", new ValidationRule { Type = "string", Required = true, Format = "timestamp" } },
-            { "reference", new ValidationRule { Type = "string", Required = false, Format = "date" } },
+            { "reference", new ValidationRule { Type = "string", Required = false, Format = "datetime" } },
             { "style", new ValidationRule { Type = "string", Required = false } }
         };
 
