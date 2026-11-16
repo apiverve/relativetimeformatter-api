@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'timestamp' => { type: 'string', required: true, format: 'timestamp' }, 'reference' => { type: 'string', required: false, format: 'date' }, 'style' => { type: 'string', required: false } }
+      VALIDATION_RULES = { 'timestamp' => { type: 'string', required: true, format: 'timestamp' }, 'reference' => { type: 'string', required: false, format: 'datetime' }, 'style' => { type: 'string', required: false } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {
