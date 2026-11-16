@@ -1,0 +1,16 @@
+name: apiverve_relativetimeformatter
+description: "Relative Time Formatter converts Unix timestamps and ISO dates into readable relative time phrases. Choose between short, long, or abbreviated styles to get humanized past or future strings, millisecond differences, and unit breakdowns from seconds to years."
+version: 1.2.6
+homepage: https://apiverve.com/marketplace/relativetimeformatter?utm_source=dart&utm_medium=referral&utm_content=homepage
+repository: https://github.com/apiverve/relativetimeformatter-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
